@@ -73,3 +73,28 @@ end
 
 
 #### Write your domain model here:
+
+OWNER HAS MANY RESTAURANTS
+SO THE RESTAURANTS TABLE WILL HAVE OWNER ID AS FOREIGN KEY
+
+REVIEWS ARE EACH LINKED TO A RESTAURANT
+REVIEWS ARE EACH LINKED TO ONE CUSTOMER
+THIS MEANS REVIEWS WILL HAVE TWO FOREIGN KEYS ONE FOR CUSTOMER AND ONE FOR RESTAURANT
+
+CUSTOMERS CAN BE LINKED TO RESTAURANTS THROUGH REVIEWS
+
+restaurants table should have a foreign id for owner
+reviews table should have a foreign id for customer
+reviews table should also have a foreign id for restaurant it is reviewing
+
+### customers
+id | name | birth_year | hometown
+
+### owners
+id | name
+
+## restaurants
+id | name | location | owner_id
+
+## reviews
+id | customer_id | restaurant_id
